@@ -1,0 +1,4 @@
+package ExercisePackage
+
+class Library {
+}

@@ -1,8 +1,8 @@
 fun main(args: Array<String>) {
 
-    var n= Aquarium("Akash","Shekhawat",22)
+    var n= Person("Akash","Shekhawat",22)
 
-    println(Aquarium.printDetails())
+    println(Person.printDetails())
     n.grade(60)
 
                     //Question2
@@ -16,7 +16,7 @@ fun main(args: Array<String>) {
 
 //Question 1: Write a program to print your Firstname,LastName & age using init block,companion object.
 
-class Aquarium (var fname:String,var lName:String,var Age:Int) {
+class Person (var fname:String,var lName:String,var Age:Int) {
     companion object Details{
         var name=" Akash"
         var lastName=" Shekhawat"

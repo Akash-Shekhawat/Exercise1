@@ -1,9 +1,13 @@
+                    //Exercise- Day 2 kotlin
+
 package ExercisePackage
+
 /* Question 3: Create 3 sub class of bank SBI,BOI,ICICI all 4 should
  * have method called getDetails which provide there specific details like
  * rateofinterest etc,print details of every bank.
 
  */
+
 fun main(args: Array<String>) {
     println(Sbi().getDetails(50000.5,9))
     println(Icici().getDetails(500000.5,6))

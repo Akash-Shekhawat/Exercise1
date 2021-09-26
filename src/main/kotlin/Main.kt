@@ -1,17 +1,48 @@
 fun main(args: Array<String>) {
 
-    var n= Person("Akash","Shekhawat",22)
+    val n= Person("Akash","Shekhawat",22)
 
     println(Person.printDetails())
     n.grade(60)
 
                     //Question2
-    var a=Question2()
+    val a=Question2()
     println("Question 2")
     a.general(8,10)             //Part1,3
     a.general(5.5,10.8)         //Part2
     a.general("To The","New")   //Part4
     a.general("To","The","New") //Part5
+
+    /*
+      *Question 6:
+      * Write a program to create mutable list of Integer.
+      *replace the second item in the list with new value. Print the list value.
+     */
+    val list: MutableList<Int> = mutableListOf<Int>(4,8,2,6,10)
+    println("Original list is: $list")
+    list.add(1,5)
+    println("list after change value of second element is: $list")
+
+    /*
+    *Question 7:
+    *Write a program to create mutable map.
+    * print all the value and key of map.
+    */
+
+    val maplist: MutableMap<Int,String> = mutableMapOf<Int,String>(1 to "Abhishek",3 to "Captain Amarica",
+        4 to "Iron Man" ,2 to "Shanu")
+
+    for (key in maplist.keys) {
+        println("Key = ${key}, Value = ${maplist[key]}")
+    }
+    /*
+     *Question8:
+     * Write a program to create HashSet. print all the value.
+     */
+    val num = hashSetOf<Int>(2,13,6,5,2,8)
+    for (element in num){
+        println(element)
+    }
 }
 
 //Question 1: Write a program to print your Firstname,LastName & age using init block,companion object.
@@ -36,6 +67,9 @@ class Person (var fname:String,var lName:String,var Age:Int) {
         println("$firstName $lastName with age $age is working with ttn")
     }
 
+
+    //Question5:Write a function which take marks as an argument and return the the grade as follows:
+
     fun grade(marks:Int){
         println("Question 5")
         when (marks) {
@@ -51,6 +85,8 @@ class Person (var fname:String,var lName:String,var Age:Int) {
     }
 
 }
+
+
  //Question2: Write a single program for following operation using overloading
 class Question2{
 
@@ -71,3 +107,4 @@ class Question2{
     }
 
 }
+
